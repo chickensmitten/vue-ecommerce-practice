@@ -6,14 +6,25 @@
       </h2>
       <img src="../assets/images/roller.png" alt="Roller">
       <h3>Feeling Hungry?</h3>
-      <button class="order_btn">Let's order!</button>
+      <button class="order_btn" @click="goToMenu">Let's order!</button>
     </div>      
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Home'
+  name: 'Home',
+  methods: {
+    goToMenu() {
+      // this.$router.go(-1)
+      // this.$router.replace('/menu');
+      // the method above takes us back to previous page.
+      // this.$router.replace({ name: "menuLink"});
+      // this.$router.push({ name: "menuLink"});
+      // warning, the browsing history is replaced like replacing an element in array. 
+      // so when you do this, it will go back rather than the about page.
+    }
+  }
 };
 </script>
 

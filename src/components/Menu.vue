@@ -23,12 +23,13 @@
             <td>{{ option.size }}</td>
             <td>{{ option.price }}</td>
             <td>
-              <button class="btn_green" type="button">+</button>
+              <button class="btn_green" type="button" @click="addToBasket(item, option)">+</button>
             </td>
           </tr>       
         </tbody>
       </table>
     </div>
+    {{ basket }}
   </div>
 </template>
 
@@ -36,6 +37,7 @@
 export default {
   data() {
     return {
+      basket: [],
       getMenuItems: {
         1: {
           'name': 'Margherita',
@@ -72,7 +74,26 @@ export default {
         }
       }
     }
-  }
+  },
+  methods: {
+    async addToBasket(item, option) {
+      const pizzaExists = await this.basket.find(
+        // find is a javascript method
+        pizza => pizza.name === item.name && pizza.size === option.size
+      )
+      if(pizzaExists) {
+        pizzaExists.quantity++
+        return
+        // once return is called, no longer need to continue the push method below
+      }
+      this.basket.push({
+        name: item.name,
+        price: item.price,
+        size: option.size,
+        quantity: 1
+      })
+    }
+  }  
 }
 </script>
 

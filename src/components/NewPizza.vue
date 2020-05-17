@@ -71,6 +71,7 @@ export default {
     display: block;
     margin: 0 0 10px 0;
   }
+  
   input, 
   textarea {
     width: 50%;

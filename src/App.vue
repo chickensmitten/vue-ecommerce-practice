@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import Header from './components/Header';
+import Header from './components/Header'
 
 export default {
   name: 'app',
@@ -42,5 +42,21 @@ li {
 
 span {
   margin: 0 5px;
+}
+
+button {
+  background: rgb(63, 145, 63);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+
+input, 
+textarea {
+  width: 50%;
+  padding: 5px;
+  box-sizing: border-box;
+  background: rgb(254, 254, 252);
+  border: solid 1px #f7de38;
 }
 </style>

@@ -70,9 +70,9 @@ export default {
   methods: {
     async signOut() {
       try {
-        await firebaseAuth.signOut()
+        await firebaseAuth.signOut();
       } catch(error) {
-        alert(`error signing out, ${error}`)
+        alert(`error signing out, ${error}`);
       }
     }
   }

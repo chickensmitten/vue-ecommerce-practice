@@ -3,25 +3,25 @@
     <!-- menu -->
     <div class="menu">
       <h3>~ Authentic handmade pizza ~</h3>
-      <table>
+      <table v-for="item in getMenuItems" :key="item.name">
         <tbody>
           <tr>
             <td>
               <strong>
-                ~ Pepperoni ~
+                ~ {{ item.name }} ~
               </strong>
             </td>
           </tr>
           <tr>
             <td>
               <small>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, ex voluptatum? Porro sit incidunt minima recusandae, vitae similique dolor sequi maxime cum eum facere voluptates velit libero eaque nesciunt est!
+                {{ item.description }}
               </small>
             </td>
           </tr>   
-          <tr>
-            <td>9"</td>
-            <td>$6.95</td>
+          <tr v-for="(option, index) in item.options" :key="option[index]">
+            <td>{{ option.size }}</td>
+            <td>{{ option.price }}</td>
             <td>
               <button class="btn_green" type="button">+</button>
             </td>
@@ -34,7 +34,45 @@
 
 <script>
 export default {
-  
+  data() {
+    return {
+      getMenuItems: {
+        1: {
+          'name': 'Margherita',
+          'description': 'A delicious tomato based pizza topped with mozzarella',
+          'options': [{
+            'size': 9,
+            'price': 6.95
+          }, {
+            'size': 12,
+            'price': 10.95
+          }]
+        },
+        2: {
+          'name': 'Pepperoni',
+          'description': 'A delicious tomato based pizza topped with mozzarella and pepperoni',
+          'options': [{
+            'size': 9,
+            'price': 7.95
+          }, {
+            'size': 12,
+            'price': 12.95
+          }]
+        },
+        3: {
+          'name': 'Ham and Pineapple',
+          'description': 'A delicious tomato based pizza topped with mozzarella, ham and pineapple',
+          'options': [{
+            'size': 9,
+            'price': 7.95
+          }, {
+            'size': 12,
+            'price': 12.95
+          }]
+        }
+      }
+    }
+  }
 }
 </script>
 

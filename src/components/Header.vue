@@ -3,26 +3,26 @@
     <div class="header_logo">
       <img src="../assets/images/planet.png" alt="Pizza Planet Icon">
       <h1 href='/'>PIZZA PLANET</h1>
-      <nav>
-        <ul>
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <span>~</span>
-          <li>
-            <a href="/menu">Menu</a>
-          </li>
-          <span>~</span>
-          <li>
-            <a href="/contact">Contact</a>
-          </li>
-          <span>~</span> 
-          <li>
-            <a href="/about">About</a>
-          </li>        
-        </ul>      
-      </nav>      
     </div>
+    <nav>
+      <ul>
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <span>~</span>
+        <li>
+          <a href="/menu">Menu</a>
+        </li>
+        <span>~</span>
+        <li>
+          <a href="/contact">Contact</a>
+        </li>
+        <span>~</span> 
+        <li>
+          <a href="/about">About</a>
+        </li>        
+      </ul>      
+    </nav>
   </header>
 </template>
 

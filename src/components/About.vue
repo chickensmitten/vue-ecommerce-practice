@@ -3,16 +3,16 @@
     <h3>~ Click on the link below for more info ~</h3>  
     <nav>
       <ul>
-        <router-link to='/history' tag='li'>
-          <a class="nav-link">Our History</a>
+        <router-link :to="{ name: 'deliveryLink'}" tag='li'>
+          <a class="nav-link">Delivery</a>
         </router-link>
         <span>~</span>
-        <router-link to='/ordering-guide' tag='li'>
+        <router-link :to="{ name: 'orderingGuideLink'}" tag='li'>
           <a class="nav-link">Ordering Guide</a>
         </router-link>
         <span>~</span>
-        <router-link to='/delivery' tag='li'>
-          <a class="nav-link">Delivery</a>
+        <router-link :to="{ name: 'historyLink'}" tag='li'>
+          <a class="nav-link">History</a>
         </router-link>
       </ul>
     </nav> 

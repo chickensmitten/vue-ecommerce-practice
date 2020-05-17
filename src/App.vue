@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <appHeader></appHeader>
-    <appHome></appHome>
+    <router-view></router-view>
     <!-- <appMenu></appMenu> -->
     <appAdmin></appAdmin>
   </div>
@@ -9,16 +9,11 @@
 
 <script>
 import Header from './components/Header';
-import Home from './components/Home';
-// import Menu from './components/Menu';
-import Admin from './components/Admin';
 
 export default {
   name: 'app',
   components: {
-    appHeader: Header,
-    appHome: Home,
-    appAdmin: Admin
+    appHeader: Header
   }
 }
 </script>

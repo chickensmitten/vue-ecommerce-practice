@@ -33,7 +33,21 @@ const routes = [
 ]
 const router = new VueRouter({
   routes,
-  mode: 'history'
+  mode: 'history',
+  scrollBehavior(to) {
+    if(to.hash) {
+      return { selector: to.hash}
+    }
+
+    // if(savedPosition) {
+    //   return savedPosition
+    // } else {
+    //   return {x: 0, y: 0};
+    // }
+
+    // return {x: 0, y: 200};
+    // return { selector: '.basket'};
+  }
 });
 
 router.beforeEach((to, from, next) => {

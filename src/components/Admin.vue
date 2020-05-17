@@ -1,7 +1,8 @@
 <template>
   <div class="admin_wrapper">
     <div class="current_user_wrapper">
-
+      <span>Logged in as:</span>
+      <button type="button" class="btn-red" @click.prevent="signOut">Sign out</button>
     </div>
 
     <NewPizza />
@@ -58,12 +59,22 @@
 <script>
 import NewPizza from './NewPizza'
 import Login from './Login'
+import { firebaseAuth } from '../firebase'
 
 export default {
   name: 'admin',
   components: {
     NewPizza,
     Login
+  },
+  methods: {
+    async signOut() {
+      try {
+        await firebaseAuth.signOut()
+      } catch(error) {
+        alert(`error signing out, ${error}`)
+      }
+    }
   }
 };
 </script>

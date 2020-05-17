@@ -8,7 +8,13 @@ import Admin from './components/Admin'
 import History from './components/History'
 
 export const routes = [
-  { path: '/', name: 'homeLink', component: Home },
+  { path: '/', name: 'homeLink', components: {
+    default: Home,
+    'ordering-guide': OrderingGuide,
+    'delivery': Delivery,
+    'history': History
+    // this could be an interesting way to show multiple charts and graphs
+  } },
   { path: '/menu', name: 'menuLink', component: Menu },
   { path: '/contact', name: 'contactLink', component: Contact },
   { path: '/admin', name: 'adminLink', component: Admin,

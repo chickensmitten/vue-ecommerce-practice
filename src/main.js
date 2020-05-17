@@ -11,9 +11,11 @@ Vue.use(VueRouter);
 const routes = [
   { path: '/', component: Home },
   { path: '/menu', component: Menu },
+  { path: '*', redirect: '/'} // covering for unrecognized URL
 ]
 const router = new VueRouter({
-  routes
+  routes,
+  mode: 'history'
 });
 
 new Vue({

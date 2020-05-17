@@ -51,15 +51,19 @@
         </tbody>
       </table>
     </div>
+    <Login></Login>
   </div>
 </template>
 
 <script>
 import NewPizza from './NewPizza'
+import Login from './Login'
+
 export default {
   name: 'admin',
   components: {
     NewPizza,
+    Login
   }
 };
 </script>

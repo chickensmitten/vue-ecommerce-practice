@@ -99,6 +99,12 @@ export default {
       }
     }
   },
+  // computed: {
+  //   getMenuItems() {
+  //     return this.$store.state.menuItems;
+  //   }
+  // },
+  // having error where state is undefined.
   methods: {
     async addToBasket(item, option) {
       const pizzaExists = await this.basket.find(

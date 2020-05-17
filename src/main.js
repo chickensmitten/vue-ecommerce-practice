@@ -8,6 +8,7 @@ import Delivery from './components/Delivery'
 import OrderingGuide from './components/Ordering'
 import Contact from './components/Contact'
 import Admin from './components/Admin'
+import History from './components/History'
 
 Vue.config.productionTip = false
 

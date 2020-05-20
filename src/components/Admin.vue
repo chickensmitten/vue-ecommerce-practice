@@ -15,9 +15,9 @@
             <th>Remove from Menu</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody v-for="item in getMenuItems" :key="item.id">
           <tr>
-            <td>Margherita</td>
+            <td>{{ item.name }}</td>
             <td>
               <button type="button" class="btn_red">&times;</button>
             </td>
@@ -66,6 +66,11 @@ export default {
   components: {
     NewPizza,
     Login
+  },
+  computed: {
+    getMenuItems() {
+      return this.$store.state.menuItems;
+    }
   },
   methods: {
     async signOut() {

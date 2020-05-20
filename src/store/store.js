@@ -7,7 +7,7 @@ export const store = new Vuex.Store({
   state: {
     menuItems: {
       1: {
-        'name': 'Margherita',
+        'name': 'Margheritaaaa',
         'description': 'A delicious tomato based pizza topped with mozzarella',
         'options': [{
           'size': 9,
@@ -41,4 +41,4 @@ export const store = new Vuex.Store({
       }
     }    
   }
-})
+});

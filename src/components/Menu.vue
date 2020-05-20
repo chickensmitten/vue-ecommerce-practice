@@ -51,24 +51,22 @@
       </div>
       <div v-else>
         <p>{{ basketText }}</p>
-        {{ this.$store.state.orders }}
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 export default {
   data() {
     return {
       basket: [],
-      basketText: "Your basket is empty",
+      basketText: "Your basket is empty.",
     }
   },
   computed: {
-    getMenuItems() {
-      return this.$store.getters.getMenuItems;
-    }
+    ...mapGetters(["getMenuItems"])
   },  
   methods: {
     async addToBasket(item, option) {

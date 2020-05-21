@@ -19,7 +19,7 @@ export const routes = [
   { path: '/contact', name: 'contactLink', component: Contact },
   { path: '/admin', name: 'adminLink', component: Admin,
     beforeEnter: (to, from, next) => {
-      alert('This area is not for you');
+      // alert('This area is not for you');
       next();
     }
   },

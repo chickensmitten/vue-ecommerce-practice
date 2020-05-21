@@ -94,6 +94,23 @@ textarea {
   width: 30%;
 }
 
+input, textarea {
+  font-size: 1.1.rem;
+}
+
+button {
+  border: none;
+  font-size: 1.1rem;
+}
+
+.btn_green {
+  background: rgb(101,168,101)
+}
+
+.btn_red {
+  background: rgb(241,70,70)
+}
+
 @media screen and (min-wdith: 900px) {
   .info_block {
     width: 100%;

@@ -21,7 +21,16 @@ const actions  = {
     try {
       await dbMenuRef.add(pizza)
     } catch(error) {
-      alert(`Error creating new pizza, ${error}`)
+      alert(`Error creating new pizza, ${error}`);
+    }
+  },
+  removeMenuItem: async(context, id) => {
+    try {
+      const item = await dbMenuRef.doc(id)
+      item.delete()
+      // call item from db, then use delete method from firebase plugin
+    } catch(error) {
+      alert(`Error removing menu item, ${error}`);
     }
   }
 }

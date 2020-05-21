@@ -1,12 +1,12 @@
 import Home from './components/Home'
-// import Menu from './components/Menu'
-const Menu = () => import('./components/Menu')
-// import About from './components/About'
-const About = () => import(/* webpackChunkName: "menuGroup" */ './components/About')
+import Menu from './components/Menu'
+// const Menu = () => import('./components/Menu')
+import About from './components/About'
+// const About = () => import(/* webpackChunkName: "menuGroup" */ './components/About')
 import Delivery from './components/Delivery'
 import OrderingGuide from './components/Ordering'
-// import Contact from './components/Contact'
-const Contact = () => import(/* webpackChunkName: "menuGroup" */ './components/Contact')
+import Contact from './components/Contact'
+// const Contact = () => import(/* webpackChunkName: "menuGroup" */ './components/Contact')
 import Admin from './components/Admin'
 import History from './components/History'
 

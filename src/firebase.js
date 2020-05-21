@@ -16,3 +16,5 @@ firebase.initializeApp(config)
 const db = firebase.firestore()
 export const firebaseAuth = firebase.auth()
 export const dbMenuRef = db.collection('menu')
+// references menu at the database
+export const dbOrdersRef = db.collection('orders')

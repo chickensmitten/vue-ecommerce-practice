@@ -6,7 +6,7 @@ const state = {
 }
 
 const mutations = {
-  addOrder: (state, orders) => state.orders.push(orders)
+  // addOrder: (state, orders) => state.orders.push(orders)
 }
 
 const getters = {
@@ -16,9 +16,16 @@ const getters = {
 
 const actions = {
   setOrdersRef: firestoreAction(context => {
-    return context.bindFirestoreRef('orders', dbOrdersRef)
+    return context.bindFirestoreRef('orders', dbOrdersRef.orderBy('createAt'))
     // orders references the orders state above.
-  })
+  }),
+  addNewOrder: async(context, order) => {
+    try {
+      await dbOrdersRef.add(order)
+    } catch(error) {
+      alert('Sorry, there was a problem placing your order, please try again.')
+    }
+  }
 }
 
 export default {

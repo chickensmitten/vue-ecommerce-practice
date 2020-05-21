@@ -99,7 +99,13 @@ export default {
       }
     },
     addNewOrder() {
-      this.$store.commit('addOrder', this.basket);
+      const order = {
+        pizzas: {...this.basket},
+        createAt: new Date(),
+        // need to convert basket to type of object, adding ... as spread operator, to merge array items into our object
+      }
+      // this.$store.commit('addOrder', this.basket);
+      this.$store.dispatch('addNewOrder', order);
       this.basket = [];
       this.basketText = 'Thank you, your order has been placed';
     }  
